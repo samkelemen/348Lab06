@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Valid Password Checker</title>
+    </head>
+    <script>
+        function valid_password() {
+            var first_password = document.getElementById("first_password").value;
+            var second_password = document.getElementById("second_password").value;
+
+
+            if (first_password.length < 8)
+            {
+                alert("The length of the first password is less than 8 letters!")
+            }
+            else if (second_password.length < 8)
+            {
+                alert("The length of the second password is less than 8 letters!")
+            }
+            else if (first_password != second_password)
+            {
+                alert("Two passwords don't match!")
+            }
+            else 
+            {
+                alert("Everything is good!")
+            }
+        }
+    </script>
+    <body>
+        <h1>Valid Password Checker</h1>
+        First Password: <input type="text" id="first_password" value=""> <br>
+        Second Password: <input type="text" id="second_password" value=""> <br>
+
+        <button onclick="valid_password()">Validate Your Passwords</button> <br>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Color Changer</title>
+    </head>
+    <style>
+        #settings {
+            border-style: solid;
+            border-width: 1px;
+        }
+    </style>
+    <body>
+        <div id="settings">Dummy text</div>
+        Border R(0-255): <input type="text" id="r_border_val" value=""> <br>
+        Border G(0-255): <input type="text" id="g_border_val" value=""> <br>
+        Border B(0-255): <input type="text" id="b_border_val" value=""> <br>
+        Border Width: <input type="text" id="border_width" value=""> <br>
+        Background R(0-255): <input type="text" id="r_bg_val" value=""> <br>
+        Background G(0-255): <input type="text" id="g_bg_val" value=""> <br>
+        Background B(0-255): <input type="text" id="b_bg_val" value=""> <br>
+
+        <button onclick="make_changes()">Change the color!</button> <br>
+        
+        <script>
+            function make_changes() {
+                // Get the elements for the border values
+                var r_border_val = document.getElementById("r_border_val").value;
+                var g_border_val = document.getElementById("g_border_val").value;
+                var b_border_val = document.getElementById("b_border_val").value;
+    
+                // Get the element for the border width
+                var border_width = document.getElementById("border_width").value;
+    
+                // Get the elements for the background values
+                var r_bg_val = document.getElementById("r_bg_val").value;
+                var g_bg_val = document.getElementById("g_bg_val").value;
+                var b_bg_val = document.getElementById("b_bg_val").value;
+    
+                // Get the elements to set the color for
+                var tag = document.getElementById("settings");
+    
+                // Set the border color
+                tag.style.borderColor = `rgb(${r_border_val},${g_border_val},${b_border_val})`;
+    
+                // Set the border width
+                tag.style.borderWidth = `${border_width}px`
+    
+                // Set the background color
+                tag.style.backgroundColor = `rgb(${r_bg_val},${g_bg_val},${b_bg_val})`;
+            }
+        </script>
+    </body>
+</html>
